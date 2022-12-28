@@ -5,7 +5,7 @@ export default function Home() {
         <h2>Mobiles</h2>
         <div className="py-4">
           <div className="w-64">
-            <div className="bg-blue-100 p-5 rounded-xl">
+            <div className="bg-blue-100 p-5">
               <img src="/products/iphone.png" alt="" />
             </div>
           </div>
