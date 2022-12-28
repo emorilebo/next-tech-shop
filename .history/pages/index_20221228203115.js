@@ -8,13 +8,9 @@ export default function Home() {
             <div className="bg-blue-100 p-5 rounded-xl">
               <img src="/products/iphone.png" alt="" />
             </div>
-            <div className="mt-2">
+            <div classN>
               <h3 className="font-bold text-lg">Iphone 14 Pro</h3>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet,
-              consectetur adipiscing elit{" "}
-            </p>
           </div>
         </div>
       </div>
