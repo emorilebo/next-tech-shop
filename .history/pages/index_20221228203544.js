@@ -16,7 +16,7 @@ export default function Home() {
               consectetur adipiscing elit{" "}
             </p>
             <div className="">
-              <button className="bg-emerald-500 text-white">+</button>
+              <button className="bg-em">+</button>
             </div>
           </div>
         </div>

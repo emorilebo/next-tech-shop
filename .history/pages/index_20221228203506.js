@@ -15,8 +15,8 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet,
               consectetur adipiscing elit{" "}
             </p>
-            <div className="">
-              <button className="bg-emerald-500 text-white">+</button>
+            <div>
+              <button></button>
             </div>
           </div>
         </div>
