@@ -11,10 +11,10 @@ export default function Home() {
             <div className="mt-2">
               <h3 className="font-bold text-lg">Iphone 14 Pro</h3>
             </div>
-            <p className="text-sm">
+            <pb>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet,
               consectetur adipiscing elit{" "}
-            </p>
+            </pb>
           </div>
         </div>
       </div>
