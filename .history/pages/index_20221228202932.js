@@ -8,9 +8,6 @@ export default function Home() {
             <div className="bg-blue-100 p-5 rounded-xl">
               <img src="/products/iphone.png" alt="" />
             </div>
-            <div>
-              <h3 className="font-bold text-lg">Iphone 14 Pro</h3>
-            </div>
           </div>
         </div>
       </div>
