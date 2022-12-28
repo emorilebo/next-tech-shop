@@ -4,7 +4,7 @@ export default function Home() {
       <h2>Mobiles</h2>
       <div className="py-4">
         <div className="w-64">
-          <div className=""><img src="/products/iphone.png" alt="" /></div>
+          <div className=""><img src="/products/ipone.png" alt="" /></div>
         </div>
       </div>
     </div>
