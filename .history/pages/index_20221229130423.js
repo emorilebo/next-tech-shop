@@ -18,7 +18,7 @@ export default function Home() {
         {categoriesNames.map((c) => (
           <div key={c}>
             <h2 className="text-2xl capitalize">{c}</h2>
-           <div className="flex">
+           <div className="">
            {productsInfo
               .filter((p) => p.category === c)
               .map((productInfo) => (

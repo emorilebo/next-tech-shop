@@ -11,6 +11,7 @@ export default function Home() {
   }, []);
 
   const categoriesNames = [...new Set(productsInfo.map((p) => p.category))];
+  console.log({ categoriesNames });
 
   return (
     <div className="p-5">
@@ -18,19 +19,18 @@ export default function Home() {
         {categoriesNames.map((c) => (
           <div key={c}>
             <h2 className="text-2xl capitalize">{c}</h2>
-           <div className="flex">
-           {productsInfo
+            {productsInfo
               .filter((p) => p.category === c)
-              .map((productInfo) => (
-                <div key={productInfo._id}>
-                  <Product {...productInfo} />
-                </div>
+              .map((product) => (
+                <div>{product.name}</div>
+                <Product/>
               ))}
-           </div>
           </div>
         ))}
 
-        <div className="py-4"></div>
+        <div className="py-4">
+          
+        </div>
       </div>
     </div>
   );
