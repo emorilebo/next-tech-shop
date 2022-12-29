@@ -9,23 +9,12 @@ export default function Home() {
       .then((json) => setProductsInfo(json));
   }, []);
 
-  const categoriesNames = [...new Set(productsInfo.map((p) => p.category))];
-  console.log({ categoriesNames });
+  console.log(productsInfo)
 
   return (
     <div className="p-5">
       <div>
-        {categoriesNames.map((c) => (
-          <div key={c}>
-            <h2 className="text-2xl capitalize">{c}</h2>
-            {productsInfo
-              .filter((p) => p.category === c)
-              .map((product) => (
-                <div>{product.name}</div>
-              ))}
-          </div>
-        ))}
-
+        <h2 className="text-2xl">Mobiles</h2>
         <div className="py-4">
           <div className="w-64">
             <div className="bg-blue-100 p-5 rounded-xl">

@@ -14,18 +14,11 @@ export default function Home() {
 
   return (
     <div className="p-5">
-      <div>
-        {categoriesNames.map((c) => (
-          <div key={c}>
-            <h2 className="text-2xl capitalize">{c}</h2>
-            {productsInfo
-              .filter((p) => p.category === c)
-              .map((product) => (
-                <div>{product.name}</div>
-              ))}
-          </div>
-        ))}
-
+      <div> 
+      {categoriesNames.map((c) =>(
+        div
+      ))}
+        
         <div className="py-4">
           <div className="w-64">
             <div className="bg-blue-100 p-5 rounded-xl">
