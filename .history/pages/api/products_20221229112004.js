@@ -3,5 +3,5 @@ import Product from "../../models/Product";
 
 export default async function handle(req, res) {
   await initMongoose();
-  res.json(await Product.find().exec());
+  res.json(await Product.findOne().exe)
 }
