@@ -13,7 +13,7 @@ export default function Home() {
 
   const categoriesNames = [...new Set(productsInfo.map((p) => p.category))];
 
-  //Filter function
+  //
   let products;
   if (phrase) {
     products = productsInfo.filter((p) =>
@@ -35,20 +35,16 @@ export default function Home() {
       <div>
         {categoriesNames.map((c) => (
           <div key={c}>
-            {products.find((p) => p.category === c) && (
-              <div>
-                <h2 className="text-2xl py-5 capitalize">{c}</h2>
-                <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide">
-                  {products
-                    .filter((p) => p.category === c)
-                    .map((productInfo) => (
-                      <div key={productInfo._id} className="px-5 snap-start">
-                        <Product {...productInfo} />
-                      </div>
-                    ))}
-                </div>
-              </div>
-            )}
+            <h2 className="text-2xl py-5 capitalize">{c}</h2>
+            <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide">
+              {products
+                .filter((p) => p.category === c)
+                .map((productInfo) => (
+                  <div key={productInfo._id} className="px-5 snap-start">
+                    <Product {...productInfo} />
+                  </div>
+                ))}
+            </div>
           </div>
         ))}
 
