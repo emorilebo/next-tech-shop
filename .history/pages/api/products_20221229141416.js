@@ -7,6 +7,6 @@ export async function findAllProducts(){
 
 export default async function handle(req, res) {
   await initMongoose();
-  res.json(await findAllProducts());
+  res.json(await );
 //   res.json(await Product.find().exec());
 }

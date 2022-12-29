@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Product from "../components/Product";
 import { initMongoose } from "../lib/mongoose";
-import { findAllProducts } from "./api/products";
 
 export default function Home({ products }) {
   // const [productsInfo, setProductsInfo] = useState([]);

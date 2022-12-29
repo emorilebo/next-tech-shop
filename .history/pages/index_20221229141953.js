@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import Product from "../components/Product";
-import { initMongoose } from "../lib/mongoose";
-import { findAllProducts } from "./api/products";
 
-export default function Home({ products }) {
+export default function Home({products}) {
   // const [productsInfo, setProductsInfo] = useState([]);
   const [phrase, setPhrase] = useState("");
 
@@ -14,16 +12,17 @@ export default function Home({ products }) {
   //     .then((json) => setProductsInfo(json));
   // }, []);
 
-  const categoriesNames = [...new Set(products.map((p) => p.category))];
+  const categoriesNames = [...new Set(productsInfo.map((p) => p.category))];
 
   //Filter function
   // let products;
   if (phrase) {
-    products = products.filter((p) => p.name.toLowerCase().includes(phrase));
+    products = productsInfo.filter((p) =>
+      p.name.toLowerCase().includes(phrase)
+    );
+  } else {
+    products = productsInfo;
   }
-  // else {
-  //   products = productsInfo;
-  // }
 
   return (
     <div className="p-5">
