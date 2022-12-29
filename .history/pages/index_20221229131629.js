@@ -18,7 +18,7 @@ export default function Home() {
         {categoriesNames.map((c) => (
           <div key={c}>
             <h2 className="text-2xl capitalize">{c}</h2>
-           <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide">
+           <div className="flex -mx-5 overflow-scroll">
            {productsInfo
               .filter((p) => p.category === c)
               .map((productInfo) => (
