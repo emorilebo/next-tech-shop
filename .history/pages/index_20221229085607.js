@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="p-5">
       <div>
-        <h2 className="text-2xl">Mobiles</h2>
+        <h2>Mobiles</h2>
         <div className="py-4">
           <div className="w-64">
             <div className="bg-blue-100 p-5 rounded-xl">
@@ -17,7 +17,7 @@ export default function Home() {
             </p>
             <div className="flex mt-1">
             <p className="text-xl font-bold grow">N899</p>
-              <button className="bg-emerald-500 text-white py-1 px-3 rounded font-bold">+</button>
+              <button className="bg-emerald-500 text-white py-1 px-3 rounded">+</button>
             </div>
           </div>
         </div>
