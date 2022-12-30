@@ -10,6 +10,7 @@ export default function Footer() {
     <footer className="sticky bottom-0 bg-white p-5 w-full flex border-t-2 border-gray-200 text-gray-500 justify-center space-x-12 ">
       <Link href={"/"}>
         <div
+         
           className={`${
             path === "/"
               ? "text-emerald-500 flex justify-center items-center flex-col"
@@ -34,13 +35,11 @@ export default function Footer() {
         </div>
       </Link>
       <Link href={"/checkout"}>
-        <div
-          className={`${
-            path === "/checkout"
+        <div   className={`${
+            path === "/checout"
               ? "text-emerald-500 flex justify-center items-center flex-col"
               : "flex justify-center items-center flex-col"
-          }`}
-        >
+          }`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
