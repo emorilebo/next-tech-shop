@@ -2,11 +2,11 @@ import { createContext, useState } from "react";
 
 export const ProductsContext = createContext({});
 
-export function ProductsContextProvider({ children }) {
+export function ProductsContextProvider() {
   const [selectedProducts, setSelectedProducts] = useState([]);
   return (
-    <ProductsContext.Provider value={{ selectedProducts }}>
-      {children}
-    </ProductsContext.Provider>
+    <ProductsContext.Provider
+      value={{ selectedProducts }}
+    ></ProductsContext.Provider>
   );
 }
