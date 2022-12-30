@@ -5,25 +5,18 @@ import React from "react";
 export default function Footer() {
   const router = useRouter();
   const path = router.pathname;
-  console.log("Path: " + path);
+  console.log("Path: "+path);
   return (
     <footer className="sticky bottom-0 bg-white p-5 w-full flex border-t-2 border-gray-200 text-gray-500 justify-center space-x-12 ">
       <Link href={"/"}>
-        <div
-         
-          className={`${
-            path === "/"
-              ? "text-emerald-500 flex justify-center items-center flex-col"
-              : "flex justify-center items-center flex-col"
-          }`}
-        >
+        <div className={(path==='/' ? 'text-emerald-500' : '') flex justify-center items-center flex-col}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="w-6 h-6"
+            class="w-6 h-6"
           >
             <path
               stroke-linecap="round"
@@ -42,7 +35,7 @@ export default function Footer() {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="w-6 h-6"
+            class="w-6 h-6"
           >
             <path
               stroke-linecap="round"
