@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 import Product from "../components/Product";
 import { initMongoose } from "../lib/mongoose";
@@ -55,6 +56,7 @@ export default function Home({ products }) {
           </div>
         ))}
       </div>
+      <Footer />
     </Layout>
   );
 }

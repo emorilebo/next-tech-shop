@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Layout from "../components/Layout";
 import Product from "../components/Product";
 import { initMongoose } from "../lib/mongoose";
 import { findAllProducts } from "./api/products";
@@ -27,7 +26,7 @@ export default function Home({ products }) {
   // }
 
   return (
-    <Layout>
+    <div className="p-5">
       <input
         value={phrase}
         type="text"
@@ -55,7 +54,8 @@ export default function Home({ products }) {
           </div>
         ))}
       </div>
-    </Layout>
+      
+    </div>
   );
 }
 
