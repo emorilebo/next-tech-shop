@@ -114,7 +114,7 @@ export default function CheckoutPage() {
           <h3 className="grow font-bold text-gray-500">Delivery:</h3>
           <h3>N1234</h3>
         </div>
-        <div className="flex my-3 border-t-2 border-dashed border-orange-200 pt-3">
+        <div className="flex my-3 border-t border-dashed">
           <h3 className="grow font-bold text-gray-500">Total:</h3>
           <h3>N1234</h3>
         </div>
