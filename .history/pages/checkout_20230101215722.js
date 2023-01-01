@@ -16,20 +16,13 @@ export default function CheckoutPage() {
   return (
     <Layout>
       {/* {productsInfos.length && <div>No Products in your shopping cart</div>} */}
-      {productsInfos.legnth === 0 ? (
-        <div>No Products in your shopping cart</div>
-      ) : (
-        productsInfos.map((productsInfo) => (
-          <div className="flex mb-5">
-            <div className="bg-gray-100 p-3 rounded-xl">
-              <img className="w-24" src={productsInfo.picture} alt="" />
-              <div>
-                <h3>{productsInfo.name}</h3>
-              </div>
-            </div>
+      {productsInfos.legnth===0 ? <div>No Products in your shopping cart</div> : 
+        productsInfos.map((productsInfo) => <div>
+          <div className="bg-gray-100 p-3 rounded-xl">
+            <img src={productsInfo.picture} alt="" />
+            div
           </div>
-        ))
-      )}
+        </div>)}
     </Layout>
   );
 }
