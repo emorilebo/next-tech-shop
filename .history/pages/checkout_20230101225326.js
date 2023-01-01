@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import { ProductsContext } from "../components/ProductsContext";
 
 export default function CheckoutPage() {
-  const { selectedProducts, setSelectedProducts } = useContext(ProductsContext);
+  const { selectedProducts } = useContext(ProductsContext);
   const [productsInfos, setProductsInfos] = useState([]);
 
   useEffect(() => {
@@ -13,10 +13,13 @@ export default function CheckoutPage() {
       .then((json) => setProductsInfos(json));
   }, [selectedProducts]);
 
-  function moreOfThisProduct(id) {
-    setSelectedProducts((prev) => [...prev, id]);
-  }
-  function lessOfThisProduct(id) {}
+function moreOfThisProduct(id){
+  
+}
+function mlessOfThisProduct(id){
+
+}
+
 
   return (
     <Layout>
@@ -46,10 +49,7 @@ export default function CheckoutPage() {
                         .length
                     }
                   </span>
-                  <button
-                    onClick={() => moreOfThisProduct(productsInfo._id)}
-                    className="border bg-orange-400 border-orange-400 px-2 rounded-md text-white"
-                  >
+                  <button className="border bg-orange-400 border-orange-400 px-2 rounded-md text-white">
                     +
                   </button>
                 </div>
