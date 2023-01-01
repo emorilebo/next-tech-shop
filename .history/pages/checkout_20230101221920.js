@@ -28,10 +28,8 @@ export default function CheckoutPage() {
             <div className="pl-4">
                 <h3 className="font-bold text-lg ">{productsInfo.name}</h3>
                 <p className="text-sm leading text-gray-500">{productsInfo.description}</p>
-                <div className="flex">
-                <div className="grow">N{productsInfo.price}</div>
-                <div>{selectedProducts.filter(id=>id === productsInfo._id).length}</div>
-                </div>
+                <div>N{productsInfo.price}</div>
+                <div></div>
               </div>
           </div>
         ))
