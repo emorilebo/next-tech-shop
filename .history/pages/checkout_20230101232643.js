@@ -72,9 +72,9 @@ export default function CheckoutPage() {
         ))
       )}
       <div>
-        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4" type="text" placeholder="Street address, number" />
-        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4" type="text" placeholder="City and postal code" />
-        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4" type="text" placeholder="Email address" />
+        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2" type="text" placeholder="Street address, number" />
+        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2" type="text" placeholder="City and postal code" />
+        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2" type="text" placeholder="Email address" />
       </div>
     </Layout>
   );
