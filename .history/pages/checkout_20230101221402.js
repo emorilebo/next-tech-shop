@@ -27,7 +27,7 @@ export default function CheckoutPage() {
             </div>
             <div className="pl-4">
                 <h3 className="font-bold text-lg ">{productsInfo.name}</h3>
-                <p className="text-sm">{productsInfo.description}</p>
+                
               </div>
           </div>
         ))

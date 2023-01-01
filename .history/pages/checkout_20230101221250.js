@@ -25,10 +25,6 @@ export default function CheckoutPage() {
               <img className="w-24" src={productsInfo.picture} alt="" />
              
             </div>
-            <div className="pl-4">
-                <h3 className="font-bold text-lg ">{productsInfo.name}</h3>
-                <p className="text-sm">{productsInfo.description}</p>
-              </div>
           </div>
         ))
       )}
