@@ -20,10 +20,10 @@ export default function CheckoutPage() {
     const pos = selectedProducts.indexOf(id);
 
     if (pos !== -1) {
-      setSelectedProducts((prev) => [
-        ...prev.slice(0, pos),
-        ...prev.slice(pos + 1),
-      ]);
+      // setSelectedProducts((prev) => [
+      //   ...prev.slice(0, pos),
+      //   ...prev.slice(pos + 1),
+      // ]);
       // setSelectedProducts((prev) => {
       //   return prev.filter((value, index) => index !== pos);
       // });
