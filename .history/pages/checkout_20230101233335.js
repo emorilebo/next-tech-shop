@@ -76,30 +76,22 @@ export default function CheckoutPage() {
         ))
       )}
       <div>
-        <input
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
+        <input value={}
           className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
           type="text"
           placeholder="Street address, number"
         />
-        <input
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
+        <input value={}
           className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
           type="text"
           placeholder="City and postal code"
         />
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+        <input value={}
           className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
           type="text"
           placeholder="Your name"
         />
-        <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+        <input value={}
           className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
           type="text"
           placeholder="Email address"
