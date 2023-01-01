@@ -41,7 +41,7 @@ export default function CheckoutPage() {
                         .length
                     }
                   </span>
-                  <button className="border bg-orange-400 border-orange-400 px-2 rounded-md text-white">
+                  <button className="border bg-orange-300 border-orange-400 px-2 rounded-md text-white">
                     +
                   </button>
                 </div>

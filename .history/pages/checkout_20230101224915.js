@@ -31,20 +31,18 @@ export default function CheckoutPage() {
               </p>
               <div className="flex">
                 <div className="grow">N{productsInfo.price}</div>
+                <button className="border border-orange-300 bg-white px-2 rounded-md text-orange-500">
+                  -
+                </button>
                 <div>
-                  <button className="border border-orange-400 bg-white px-2 rounded-md text-orange-400">
-                    -
-                  </button>
-                  <span className="px-2">
-                    {
-                      selectedProducts.filter((id) => id === productsInfo._id)
-                        .length
-                    }
-                  </span>
-                  <button className="border bg-orange-400 border-orange-400 px-2 rounded-md text-white">
-                    +
-                  </button>
+                  {
+                    selectedProducts.filter((id) => id === productsInfo._id)
+                      .length
+                  }
                 </div>
+                <button className="border bg-orange-300 border-orange-400 px-2 rounded-md text-white">
+                  +
+                </button>
               </div>
             </div>
           </div>
