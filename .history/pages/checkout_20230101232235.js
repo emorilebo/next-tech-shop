@@ -71,11 +71,7 @@ export default function CheckoutPage() {
           </div>
         ))
       )}
-      <div>
-        <input type="text" placeholder="Street address, number" />
-        <input type="text" placeholder="City and postal code" />
-        <input type="text" placeholder="Email address" />
-      </div>
+      div
     </Layout>
   );
 }
