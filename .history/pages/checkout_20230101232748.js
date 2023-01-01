@@ -5,10 +5,6 @@ import { ProductsContext } from "../components/ProductsContext";
 export default function CheckoutPage() {
   const { selectedProducts, setSelectedProducts } = useContext(ProductsContext);
   const [productsInfos, setProductsInfos] = useState([]);
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
 
   useEffect(() => {
     const uniqIds = [...new Set(selectedProducts)];
@@ -76,26 +72,9 @@ export default function CheckoutPage() {
         ))
       )}
       <div>
-        <input
-          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-          type="text"
-          placeholder="Street address, number"
-        />
-        <input
-          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-          type="text"
-          placeholder="City and postal code"
-        />
-        <input
-          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-          type="text"
-          placeholder="Your name"
-        />
-        <input
-          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-          type="text"
-          placeholder="Email address"
-        />
+        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none" type="text" placeholder="Street address, number" />
+        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none" type="text" placeholder="City and postal code" />
+        <input className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none" type="text" placeholder="Email address" />
       </div>
     </Layout>
   );
