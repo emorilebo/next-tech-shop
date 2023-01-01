@@ -33,12 +33,7 @@ export default function CheckoutPage() {
   }
 
   let total = 0;
-  if (selectedProducts?.length) {
-    for (let id of selectedProducts) {
-      const price = productsInfos.find((p) => p._id === id).price;
-      total = total + price;
-    }
-  }
+  if(selectedProducts)
 
   return (
     <Layout>
