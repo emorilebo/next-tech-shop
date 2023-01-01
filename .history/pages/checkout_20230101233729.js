@@ -105,10 +105,8 @@ export default function CheckoutPage() {
           placeholder="Email address"
         />
       </div>
-      <div>
-        <h3>Subtotal:</h3>
-        <h3>N1234</h3>
-      </div>
+      <div><h3></h3>
+      <h3></h3></div>
     </Layout>
   );
 }
