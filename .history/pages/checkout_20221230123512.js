@@ -8,20 +8,11 @@ export default function CheckoutPage() {
 
   useEffect(() => {
     const uniqIds = [...new Set(selectedProducts)];
-    fetch("/api/products?ids=" + uniqIds.join(","))
+    fetch("/api/products?ids="+uniqIds.join(','))
       .then((res) => res.json())
       .then((json) => setProductsInfos(json));
   }, [selectedProducts]);
 
-  return (
-    <Layout>
-      {/* {productsInfos.length && <div>No Products in your shopping cart</div>} */}
-      {productsInfos.legnth===0 ? <div>No Products in your shopping cart</div> : 
-        productsInfos.map((productsInfo) => <div>
-          <div className="bg-gray-100 p-3 rounded-xl">
-            <img src={productsInfo.picture} alt="" />
-          </div>
-        </div>)}
-    </Layout>
-  );
+  
+  return <Layout>{selectedProducts.join(",")}</Layout>;
 }

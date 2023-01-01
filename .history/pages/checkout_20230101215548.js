@@ -18,7 +18,7 @@ export default function CheckoutPage() {
       {/* {productsInfos.length && <div>No Products in your shopping cart</div>} */}
       {productsInfos.legnth===0 ? <div>No Products in your shopping cart</div> : 
         productsInfos.map((productsInfo) => <div>
-          <div className="bg-gray-100 p-3 rounded-xl">
+          <div className="">
             <img src={productsInfo.picture} alt="" />
           </div>
         </div>)}
