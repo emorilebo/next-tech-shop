@@ -30,9 +30,8 @@ export default function CheckoutPage() {
                 <p className="text-sm leading text-gray-500">{productsInfo.description}</p>
                 <div className="flex">
                 <div className="grow">N{productsInfo.price}</div>
-                <button className="border border-orange-300 bg-white px-2 rounded-md text-orange-500">-</button>
+                <button className="">-</button>
                 <div>{selectedProducts.filter(id=>id === productsInfo._id).length}</div>
-                <button className="border bg-orange-300 border-orange-400 px-2 rounded-md text-white">+</button>
                 </div>
               </div>
           </div>
