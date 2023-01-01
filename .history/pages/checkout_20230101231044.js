@@ -17,17 +17,10 @@ export default function CheckoutPage() {
     setSelectedProducts((prev) => [...prev, id]);
   }
   function lessOfThisProduct(id) {
+    console.log(id);
     const pos = selectedProducts.indexOf(id);
-
-    if (pos !== -1) {
-      // setSelectedProducts((prev) => [
-      //   ...prev.slice(0, pos),
-      //   ...prev.slice(pos + 1),
-      // ]);
-      setSelectedProducts((prev) => {
-        return prev.filter((value, index) => index !== pos);
-      });
-    }
+    console.log(pos);
+    if(pos)
   }
 
   return (

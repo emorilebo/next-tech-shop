@@ -17,8 +17,9 @@ export default function CheckoutPage() {
     setSelectedProducts((prev) => [...prev, id]);
   }
   function lessOfThisProduct(id) {
+    console.log(id);
     const pos = selectedProducts.indexOf(id);
-
+    console.log(pos);
     if (pos !== -1) {
       // setSelectedProducts((prev) => [
       //   ...prev.slice(0, pos),

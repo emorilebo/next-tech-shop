@@ -17,17 +17,7 @@ export default function CheckoutPage() {
     setSelectedProducts((prev) => [...prev, id]);
   }
   function lessOfThisProduct(id) {
-    const pos = selectedProducts.indexOf(id);
-
-    if (pos !== -1) {
-      // setSelectedProducts((prev) => [
-      //   ...prev.slice(0, pos),
-      //   ...prev.slice(pos + 1),
-      // ]);
-      setSelectedProducts((prev) => {
-        return prev.filter((value, index) => index !== pos);
-      });
-    }
+    console.log
   }
 
   return (
@@ -49,10 +39,7 @@ export default function CheckoutPage() {
               <div className="flex">
                 <div className="grow">N{productsInfo.price}</div>
                 <div>
-                  <button
-                    onClick={() => lessOfThisProduct(productsInfo._id)}
-                    className="border border-orange-400 bg-white px-2 rounded-md text-orange-400"
-                  >
+                  <button onClick={() => lessOfThisProduct(productsInfo._id)} className="border border-orange-400 bg-white px-2 rounded-md text-orange-400">
                     -
                   </button>
                   <span className="px-2">
