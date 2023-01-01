@@ -109,13 +109,11 @@ export default function CheckoutPage() {
         <div className="flex">
           <h3 className="grow">Subtotal:</h3>
           <h3>N1234</h3>
-        </div>
         <div className="flex">
-          <h3 className="grow">Delivery:</h3>
+          <h3 className="grow">Subtotal:</h3>
           <h3>N1234</h3>
-        </div>
         <div className="flex">
-          <h3 className="grow">Total:</h3>
+          <h3 className="grow">Subtotal:</h3>
           <h3>N1234</h3>
         </div>
       </div>

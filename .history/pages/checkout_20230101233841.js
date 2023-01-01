@@ -105,19 +105,9 @@ export default function CheckoutPage() {
           placeholder="Email address"
         />
       </div>
-      <div className="mt-4">
-        <div className="flex">
-          <h3 className="grow">Subtotal:</h3>
-          <h3>N1234</h3>
-        </div>
-        <div className="flex">
-          <h3 className="grow">Delivery:</h3>
-          <h3>N1234</h3>
-        </div>
-        <div className="flex">
-          <h3 className="grow">Total:</h3>
-          <h3>N1234</h3>
-        </div>
+      <div className="">
+        <h3>Subtotal:</h3>
+        <h3>N1234</h3>
       </div>
     </Layout>
   );
