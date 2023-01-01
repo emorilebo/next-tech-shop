@@ -108,15 +108,15 @@ export default function CheckoutPage() {
       <div className="mt-4">
         <div className="flex my-3">
           <h3 className="grow font-bold text-gray-500">Subtotal:</h3>
-          <h3 className="font-bold">N1234</h3>
+          <h3 class>N1234</h3>
         </div>
         <div className="flex my-3">
           <h3 className="grow font-bold text-gray-500">Delivery:</h3>
-          <h3 className="font-bold">N1234</h3>
+          <h3 class>N1234</h3>
         </div>
         <div className="flex my-3 border-t-2 border-dashed border-orange-200 pt-3">
           <h3 className="grow font-bold text-gray-500">Total:</h3>
-          <h3 className="font-bold">N1234</h3>
+          <h3 class>N1234</h3>
         </div>
       </div>
     </Layout>
