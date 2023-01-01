@@ -24,7 +24,8 @@ export default function CheckoutPage() {
       //   ...prev.slice(0, pos),
       //   ...prev.slice(pos + 1),
       // ]);
-      setSelectedProducts((prev) => prev.filter((index) => index !== pos));
+      setSelectedProducts((prev) => prev.filter(( index) => index !== pos)
+      );
     }
   }
 
