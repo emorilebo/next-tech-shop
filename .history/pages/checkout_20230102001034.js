@@ -36,11 +36,11 @@ export default function CheckoutPage() {
   let subTotal = 0;
   if (selectedProducts?.length) {
     for (let id of selectedProducts) {
-      const price = productsInfos?.find((p) => p._id === id).price;
+      const price = productsInfos.find((p) => p._id === id).price;
       subTotal = subTotal + price;
     }
   }
-  let total = subTotal + deliveryPrice;
+  total = subTotal + delivery
 
   return (
     <Layout>

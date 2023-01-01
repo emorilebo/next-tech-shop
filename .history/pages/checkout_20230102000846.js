@@ -32,15 +32,13 @@ export default function CheckoutPage() {
     }
   }
 
-  const deliveryPrice = 5;
-  let subTotal = 0;
+  let total = 0;
   if (selectedProducts?.length) {
     for (let id of selectedProducts) {
-      const price = productsInfos?.find((p) => p._id === id).price;
-      subTotal = subTotal + price;
+      const price = productsInfos.find((p) => p._id === id).price;
+      total = total + price;
     }
   }
-  let total = subTotal + deliveryPrice;
 
   return (
     <Layout>
@@ -118,7 +116,7 @@ export default function CheckoutPage() {
       <div className="mt-4">
         <div className="flex my-3">
           <h3 className="grow font-bold text-gray-500">Subtotal:</h3>
-          <h3 className="font-bold">N{subTotal}</h3>
+          <h3 className="font-bold">N{</h3>
         </div>
         <div className="flex my-3">
           <h3 className="grow font-bold text-gray-500">Delivery:</h3>

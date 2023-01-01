@@ -32,15 +32,14 @@ export default function CheckoutPage() {
     }
   }
 
-  const deliveryPrice = 5;
+  const delivery
   let subTotal = 0;
   if (selectedProducts?.length) {
     for (let id of selectedProducts) {
-      const price = productsInfos?.find((p) => p._id === id).price;
+      const price = productsInfos.find((p) => p._id === id).price;
       subTotal = subTotal + price;
     }
   }
-  let total = subTotal + deliveryPrice;
 
   return (
     <Layout>
