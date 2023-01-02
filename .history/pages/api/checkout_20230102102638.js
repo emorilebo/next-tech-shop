@@ -1,5 +1,4 @@
 import { initMongoose } from "../../lib/mongoose";
-import Product from "../../models/Product";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
@@ -8,16 +7,15 @@ export default async function handler(req, res) {
     res.body("Should be a post but it is not").send();
   }
 
-  const productsIds = req.body.products.split(",");
+  const productsIds = req.body.products.splits(",");
   const uniqIds = [...new Set(productsIds)];
   const products = await Product.find({ _id: { $in: uniqIds } }).exec();
-  res.json(products);
-  return;
+  console.log(products);
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        //price: "{{PRICE_ID}}",
+        price: "{{PRICE_ID}}",
         quantity: 1,
       },
     ],

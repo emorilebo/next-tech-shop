@@ -11,8 +11,7 @@ export default async function handler(req, res) {
   const productsIds = req.body.products.split(",");
   const uniqIds = [...new Set(productsIds)];
   const products = await Product.find({ _id: { $in: uniqIds } }).exec();
-  res.json(products);
-  return;
+  console.log(products);
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {

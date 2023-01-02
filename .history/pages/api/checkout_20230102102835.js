@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   const uniqIds = [...new Set(productsIds)];
   const products = await Product.find({ _id: { $in: uniqIds } }).exec();
   res.json(products);
-  return;
+  
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
