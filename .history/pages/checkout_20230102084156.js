@@ -123,11 +123,11 @@ export default function CheckoutPage() {
         </div>
         <div className="flex my-3">
           <h3 className="grow font-bold text-gray-500">Delivery:</h3>
-          <h3 className="font-bold">N{deliveryPrice}</h3>
+          <h3 className="font-bold">{delivery}</h3>
         </div>
         <div className="flex my-3 border-t-2 border-dashed border-orange-200 pt-3">
           <h3 className="grow font-bold text-gray-500">Total:</h3>
-          <h3 className="font-bold">N{total}</h3>
+          <h3 className="font-bold">{to}</h3>
         </div>
       </div>
     </Layout>
