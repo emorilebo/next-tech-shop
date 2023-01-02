@@ -88,55 +88,51 @@ export default function CheckoutPage() {
         ))
       )}
       <form action="/api/checkout" method="POST">
-        <div className="mt-4">
-          <input
-            value={address}
-            name={address}
-            onChange={(e) => setAddress(e.target.value)}
-            className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-            type="text"
-            placeholder="Street address, number"
-          />
-          <input
-            value={city}
-            name={city}
-            onChange={(e) => setCity(e.target.value)}
-            className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-            type="text"
-            placeholder="City and postal code"
-          />
-          <input
-            value={name}
-            name={name}
-            onChange={(e) => setName(e.target.value)}
-            className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-            type="text"
-            placeholder="Your name"
-          />
-          <input
-            value={email}
-            name={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
-            type="text"
-            placeholder="Email address"
-          />
+      <div>
+        <input
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
+          type="text"
+          placeholder="Street address, number"
+        />
+        <input
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
+          type="text"
+          placeholder="City and postal code"
+        />
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
+          type="text"
+          placeholder="Your name"
+        />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
+          type="text"
+          placeholder="Email address"
+        />
+      </div>
+      <div className="mt-4">
+        <div className="flex my-3">
+          <h3 className="grow font-bold text-gray-500">Subtotal:</h3>
+          <h3 className="font-bold">N{subTotal}</h3>
         </div>
-        <div className="mt-4">
-          <div className="flex my-3">
-            <h3 className="grow font-bold text-gray-500">Subtotal:</h3>
-            <h3 className="font-bold">N{subTotal}</h3>
-          </div>
-          <div className="flex my-3">
-            <h3 className="grow font-bold text-gray-500">Delivery:</h3>
-            <h3 className="font-bold">N{deliveryPrice}</h3>
-          </div>
-          <div className="flex my-3 border-t-2 border-dashed border-orange-200 pt-3">
-            <h3 className="grow font-bold text-gray-500">Total:</h3>
-            <h3 className="font-bold">N{total}</h3>
-          </div>
+        <div className="flex my-3">
+          <h3 className="grow font-bold text-gray-500">Delivery:</h3>
+          <h3 className="font-bold">N{deliveryPrice}</h3>
         </div>
-
+        <div className="flex my-3 border-t-2 border-dashed border-orange-200 pt-3">
+          <h3 className="grow font-bold text-gray-500">Total:</h3>
+          <h3 className="font-bold">N{total}</h3>
+        </div>
+      </div>
+      
         <input
           type="hidden"
           name="products"

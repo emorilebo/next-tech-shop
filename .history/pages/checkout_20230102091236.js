@@ -99,7 +99,8 @@ export default function CheckoutPage() {
           />
           <input
             value={city}
-            name={city}
+            value={city}
+            name={}
             onChange={(e) => setCity(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
@@ -107,7 +108,7 @@ export default function CheckoutPage() {
           />
           <input
             value={name}
-            name={name}
+            name={}
             onChange={(e) => setName(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
@@ -115,7 +116,7 @@ export default function CheckoutPage() {
           />
           <input
             value={email}
-            name={email}
+            name={}
             onChange={(e) => setEmail(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
