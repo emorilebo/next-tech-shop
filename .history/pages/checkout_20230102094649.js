@@ -91,7 +91,7 @@ export default function CheckoutPage() {
         <div className="mt-4">
           <input
             value={address}
-            name="address"
+            name={address}
             onChange={(e) => setAddress(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
@@ -99,7 +99,7 @@ export default function CheckoutPage() {
           />
           <input
             value={city}
-            name="city"
+            name="email"
             onChange={(e) => setCity(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
@@ -107,7 +107,7 @@ export default function CheckoutPage() {
           />
           <input
             value={name}
-            name="name"
+            name={name}
             onChange={(e) => setName(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
@@ -115,7 +115,7 @@ export default function CheckoutPage() {
           />
           <input
             value={email}
-            name="email"
+            name={email}
             onChange={(e) => setEmail(e.target.value)}
             className="bg-gray-200 w-full rounded-lg py-2 mb-2 px-4 outline-none"
             type="text"
