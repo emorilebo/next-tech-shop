@@ -22,14 +22,14 @@ export default function CheckoutPage() {
   }
   function lessOfThisProduct(id) {
     const pos = selectedProducts.indexOf(id);
-    console.log("Removed");
+    console.log("")
 
     if (pos !== -1) {
-      setSelectedProducts((prev) => [
-        ...prev.slice(0, pos),
-        ...prev.slice(pos + 1),
-      ]);
-      // setSelectedProducts((prev) => prev.filter((index) => index !== pos));
+      // setSelectedProducts((prev) => [
+      //   ...prev.slice(0, pos),
+      //   ...prev.slice(pos + 1),
+      // ]);
+      setSelectedProducts((prev) => prev.filter((index) => index !== pos));
     }
   }
   // console.log("productsInfos prices: " + productsInfos.map((p) => p.price));
