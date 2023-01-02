@@ -13,7 +13,7 @@ export default function Footer() {
         <div
           className={`${
             path === "/"
-              ? "text-orange-500 flex justify-center items-center flex-col"
+              ? "text-or-500 flex justify-center items-center flex-col"
               : "flex justify-center items-center flex-col"
           }`}
         >

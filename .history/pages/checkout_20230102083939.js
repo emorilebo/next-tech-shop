@@ -31,13 +31,13 @@ export default function CheckoutPage() {
       setSelectedProducts((prev) => prev.filter((index) => index !== pos));
     }
   }
-  // console.log("productsInfos prices: " + productsInfos.map((p) => p.price));
+  console.log("productsInfos prices: " + productsInfos.map((p)=>p.price));
 
   const deliveryPrice = 5;
   let subTotal = 0;
   if (selectedProducts?.length) {
     for (let id of selectedProducts) {
-      const price = productsInfos?.find((p) => p._id === id)?.price || 0;
+      const price = productsInfos?.find((p) => p._id === id)?.price ||0;
       subTotal += price;
     }
   }

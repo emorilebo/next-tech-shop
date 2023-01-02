@@ -31,16 +31,16 @@ export default function CheckoutPage() {
       setSelectedProducts((prev) => prev.filter((index) => index !== pos));
     }
   }
-  // console.log("productsInfos prices: " + productsInfos.map((p) => p.price));
+  console.log("productsInfos: " + productsInfos);
 
   const deliveryPrice = 5;
   let subTotal = 0;
-  if (selectedProducts?.length) {
-    for (let id of selectedProducts) {
-      const price = productsInfos?.find((p) => p._id === id)?.price || 0;
-      subTotal += price;
-    }
-  }
+  // if (selectedProducts?.length) {
+  //   for (let id of selectedProducts) {
+  //     const pricee = productsInfos?.find((p) => p._id === id).price;
+  //     subTotal += pricee;
+  //   }
+  // }
   let total = subTotal + deliveryPrice;
 
   return (

@@ -8,12 +8,12 @@ export default function Footer() {
   const path = router.pathname;
   const {selectedProducts} = useContext(ProductsContext)
   return (
-    <footer className="sticky bottom-0 rounded-t-2xl shadow-t-2xl bg-white p-5 w-full flex border-t-2 border-gray-200 text-gray-500 justify-center space-x-12 ">
+    <footer className="sticky bottom-0 rounded-t-2xl shadow-xl bg-white p-5 w-full flex border-t-2 border-gray-200 text-gray-500 justify-center space-x-12 ">
       <Link href={"/"}>
         <div
           className={`${
             path === "/"
-              ? "text-orange-500 flex justify-center items-center flex-col"
+              ? "text-emerald-500 flex justify-center items-center flex-col"
               : "flex justify-center items-center flex-col"
           }`}
         >

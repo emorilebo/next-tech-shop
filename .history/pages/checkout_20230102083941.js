@@ -31,7 +31,7 @@ export default function CheckoutPage() {
       setSelectedProducts((prev) => prev.filter((index) => index !== pos));
     }
   }
-  // console.log("productsInfos prices: " + productsInfos.map((p) => p.price));
+  console.log("productsInfos prices: " + productsInfos.map((p) => p.price));
 
   const deliveryPrice = 5;
   let subTotal = 0;
