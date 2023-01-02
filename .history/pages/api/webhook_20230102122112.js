@@ -1,7 +1,7 @@
 import { buffer } from "micro";
 import { initMongoose } from "../../lib/mongoose";
 import Order from "../../models/Orders";
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   await initMongoose();
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 }
 
 export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
+    api: {
+      bodyParser: false,
+    }
+  };
