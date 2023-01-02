@@ -132,15 +132,8 @@ export default function CheckoutPage() {
         </div>
       </div>
       <form action="/api/checkout" method="POST">
-        <input
-          type="hidden"
-          name="products"
-          value={selectedProducts.join(",")}
-        />
-        <button
-          type="submit"
-          className="bg-orange-500 px-5 py-2 rounded-xl text-white font-bold w-full mt-4 shadow-orange-300 shadow-xl"
-        >
+      <input name="products" value={selectedProducts.join}/>
+        <button type="submit" className="bg-orange-500 px-5 py-2 rounded-xl text-white font-bold w-full mt-4 shadow-orange-300 shadow-xl">
           PAY N{total}
         </button>
       </form>
