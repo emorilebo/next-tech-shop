@@ -126,12 +126,12 @@ export default function CheckoutPage() {
           <h3 className="grow font-bold text-gray-500">Delivery:</h3>
           <h3 className="font-bold">N{deliveryPrice}</h3>
         </div>
-        <div className="flex my-3 border-t-2 border-dashed border-orange-200 pt-3">
+        <div className="flex my-3 border-t-2 border-dashed shadow border-orange-200 pt-3">
           <h3 className="grow font-bold text-gray-500">Total:</h3>
           <h3 className="font-bold">N{total}</h3>
         </div>
       </div>
-      <button className="bg-orange-500 px-5 py-2 rounded-xl text-white font-bold w-full mt-4 shadow-orange-300 shadow-xl">Pay N{total}</button>
+      <button className="bg-orange-500 px-5 py-2 rounded-xl text-white font-bold w-full mt-4 shadow-orange-400 shadow-xl">Pay N{total}</button>
     </Layout>
   );
 }

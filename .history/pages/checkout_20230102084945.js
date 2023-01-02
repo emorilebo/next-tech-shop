@@ -131,7 +131,7 @@ export default function CheckoutPage() {
           <h3 className="font-bold">N{total}</h3>
         </div>
       </div>
-      <button className="bg-orange-500 px-5 py-2 rounded-xl text-white font-bold w-full mt-4 shadow-orange-300 shadow-xl">Pay N{total}</button>
+      <button className="bg-orange-500 px-5 py-2 rounded-xl text-white font-bold">Pay N{total}</button>
     </Layout>
   );
 }
