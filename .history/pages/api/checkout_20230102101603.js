@@ -19,7 +19,5 @@ export default async function handler(req, res) {
     cancel_url: `${req.headers.origin}/?canceled=true`,
     automatic_tax: {enabled: true},
   });
-  res.redirect(303, session.url);
-
   res.json("Ok");
 }
