@@ -16,13 +16,7 @@ export default function Layout({ children }) {
   return (
     <div>
       <div className="p-5">
-        {success && (
-          <div className="mb-5 bg-orange-400 text-white text-lg">
-            Thanks for ordering from Raeven
-          </div>
-        )}
-        {children}
-      </div>
+      {children}</div>
       <Footer />
     </div>
   );
