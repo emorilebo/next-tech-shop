@@ -51,10 +51,7 @@ export default function CheckoutPage() {
         <div>No Products in your shopping cart</div>
       ) : (
         productsInfos.map((productsInfo) => {
-          const amount = selectedProducts.filter(
-            (id) => id === productsInfo._id
-          ).length;
-          if (amount === 0) return;
+          const amount = selectedProducts
           return (
             <div key={productsInfo._id} className="flex mb-5">
               <div className="bg-gray-100 p-3 rounded-xl shrink-0">

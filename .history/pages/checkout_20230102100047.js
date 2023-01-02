@@ -50,47 +50,43 @@ export default function CheckoutPage() {
       {productsInfos.legnth === 0 ? (
         <div>No Products in your shopping cart</div>
       ) : (
-        productsInfos.map((productsInfo) => {
-          const amount = selectedProducts.filter(
-            (id) => id === productsInfo._id
-          ).length;
-          if (amount === 0) return;
-          return (
-            <div key={productsInfo._id} className="flex mb-5">
-              <div className="bg-gray-100 p-3 rounded-xl shrink-0">
-                <img className="w-24" src={productsInfo.picture} alt="" />
-              </div>
-              <div className="pl-4">
-                <h3 className="font-bold text-lg ">{productsInfo.name}</h3>
-                <p className="text-sm leading text-gray-500">
-                  {productsInfo.description}
-                </p>
-                <div className="flex">
-                  <div className="grow">N{productsInfo.price}</div>
-                  <div>
-                    <button
-                      onClick={() => lessOfThisProduct(productsInfo._id)}
-                      className="border border-orange-400 bg-white px-2 rounded-md text-orange-400"
-                    >
-                      -
-                    </button>
-                    <span className="px-2">
-                      {
-                        selectedProducts.filter((id) => id === productsInfo._id)
-                          .length
-                      }
-                    </span>
-                    <button
-                      onClick={() => moreOfThisProduct(productsInfo._id)}
-                      className="border bg-orange-400 border-orange-400 px-2 rounded-md text-white"
-                    >
-                      +
-                    </button>
-                  </div>
+        productsInfos.map((productsInfo) =>{
+          return  (
+          <div key={productsInfo._id} className="flex mb-5">
+            <div className="bg-gray-100 p-3 rounded-xl shrink-0">
+              <img className="w-24" src={productsInfo.picture} alt="" />
+            </div>
+            <div className="pl-4">
+              <h3 className="font-bold text-lg ">{productsInfo.name}</h3>
+              <p className="text-sm leading text-gray-500">
+                {productsInfo.description}
+              </p>
+              <div className="flex">
+                <div className="grow">N{productsInfo.price}</div>
+                <div>
+                  <button
+                    onClick={() => lessOfThisProduct(productsInfo._id)}
+                    className="border border-orange-400 bg-white px-2 rounded-md text-orange-400"
+                  >
+                    -
+                  </button>
+                  <span className="px-2">
+                    {
+                      selectedProducts.filter((id) => id === productsInfo._id)
+                        .length
+                    }
+                  </span>
+                  <button
+                    onClick={() => moreOfThisProduct(productsInfo._id)}
+                    className="border bg-orange-400 border-orange-400 px-2 rounded-md text-white"
+                  >
+                    +
+                  </button>
                 </div>
               </div>
             </div>
-          );
+          </div>
+        )
         })
       )}
       <form action="/api/checkout" method="POST">
