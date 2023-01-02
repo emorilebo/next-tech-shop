@@ -17,24 +17,24 @@ export default async function handler(req, res) {
     const quantity = productsIds.find((id) => productId).length;
     const product = products.find((p) => p._id.toString() === productId);
     line_items.push({
-      quantity,
-      price_data: {
-        currency: "USD",
-        product_data: { name: product.name },
-        unit_amount: product.price * 100,
-      },
-    });
-    //   res.json(products);
-
-    const session = await stripe.checkout.sessions.create({
-      line_items: line_items,
-      mode: "payment",
-      success_url: `${req.headers.origin}/?success=true`,
-      cancel_url: `${req.headers.origin}/?canceled=true`,
-    //   automatic_tax: { enabled: true },
-    });
-    res.redirect(303, session.url);
-
-    //   res.json(req.method);
+      name: product.name,}
   }
+  res.json(products);
+  return;
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
+        //price: "{{PRICE_ID}}",
+        quantity: 1,
+      },
+    ],
+    mode: "payment",
+    success_url: `${req.headers.origin}/?success=true`,
+    cancel_url: `${req.headers.origin}/?canceled=true`,
+    automatic_tax: { enabled: true },
+  });
+  res.redirect(303, session.url);
+
+  res.json("Ok");
 }

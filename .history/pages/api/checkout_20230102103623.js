@@ -18,23 +18,20 @@ export default async function handler(req, res) {
     const product = products.find((p) => p._id.toString() === productId);
     line_items.push({
       quantity,
-      price_data: {
-        currency: "USD",
-        product_data: { name: product.name },
-        unit_amount: product.price * 100,
-      },
-    });
-    //   res.json(products);
+      price_data:{
+        currency: 
+      }
+  })
+  res.json(products);
 
-    const session = await stripe.checkout.sessions.create({
-      line_items: line_items,
-      mode: "payment",
-      success_url: `${req.headers.origin}/?success=true`,
-      cancel_url: `${req.headers.origin}/?canceled=true`,
-    //   automatic_tax: { enabled: true },
-    });
-    res.redirect(303, session.url);
+  const session = await stripe.checkout.sessions.create({
+    line_items: line_items,
+    mode: "payment",
+    success_url: `${req.headers.origin}/?success=true`,
+    cancel_url: `${req.headers.origin}/?canceled=true`,
+    automatic_tax: { enabled: true },
+  });
+  res.redirect(303, session.url);
 
-    //   res.json(req.method);
-  }
+  res.json("Ok");
 }
