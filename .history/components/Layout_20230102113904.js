@@ -1,13 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
-import { ProductsContext } from "./ProductsContext";
 
 export default function Layout({ children }) {
-  const { setSelectedProducts } = useContext(ProductsContext);
   useEffect(() => {
     console.log(window.location.href);
-    if (window.location.href.includes("success")) {
-      setSelectedProducts([]);
+    if(window.location.href.includes('success')){
+      
     }
   }, []);
 
