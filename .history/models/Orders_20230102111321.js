@@ -1,4 +1,4 @@
-import { model, models, Schema } from "mongoose";
+import { models, Schema } from "mongoose";
 
 const OrderSchema = new Schema(
   {

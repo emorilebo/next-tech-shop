@@ -29,10 +29,7 @@ export default async function handler(req, res) {
     //   res.json(products);
     const order = await Order.create({
       products: line_items,
-      name,
-      email,
-      address,
-      city,
+      
       paid: 0,
     });
 
