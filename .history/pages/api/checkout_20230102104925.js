@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     res.json("Should be a post but it is not");
   }
 
-  const { email, name, address, city } = req.body;
+  const {email, name, address, city} = req.body;
   const productsIds = req.body.products.split(",");
   const uniqIds = [...new Set(productsIds)];
   const products = await Product.find({ _id: { $in: uniqIds } }).exec();
