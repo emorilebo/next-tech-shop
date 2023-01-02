@@ -27,10 +27,6 @@ export default async function handler(req, res) {
       },
     });
     //   res.json(products);
-    const order = await Order.create({
-      products: line_items,
-      paid: 0,
-    });
 
     const session = await stripe.checkout.sessions.create({
       line_items: line_items,
@@ -39,9 +35,11 @@ export default async function handler(req, res) {
       success_url: `${req.headers.origin}/?success=true`,
       cancel_url: `${req.headers.origin}/?canceled=true`,
       //   automatic_tax: { enabled: true },
-      metadata: { orderId: order._id.toString() },
     });
-
+   await  Order.create({
+    products: line_items,
+    paid: 0
+   })
     res.redirect(303, session.url);
 
     //   res.json(req.method);

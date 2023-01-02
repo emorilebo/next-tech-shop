@@ -4,7 +4,7 @@ const OrderSchema = new Schema(
     name: String,
     email: String,
     address: String,
-    city: String,
+    
     paid: { type: Number, defaultValue: 0 },
   },
   { timestamps: true }
